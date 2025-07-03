@@ -31,12 +31,20 @@ I have used the **UrbanEV dataset**[1] which includes:
 - Scaled the features to handle the skewness
 - Trained each zone with early stopping and RMSE tracking. Model stored using `joblib` along with all the scalers and feature sets zone-wise.
 
-####Structue of LSTM Model:
+**Structue of LSTM Model:**
 ![image](https://github.com/user-attachments/assets/3b05e2ac-6af9-4540-80c4-23374f0914c6)
 
-####Innovation:
+**Innovation:**
 - Dense layers with ReLU activation for non-linear demand mapping
 - Predicts future demand using past 72 hours data to capture hourly trends and also include any weekday effect
+
+**Training Results**
+- `\models\training_log.csv` has the zone-wise RMSE loss for each model
+- Each zone has also a forecast plot (First 100 sequences) on the validation dataset stored
+Eg: Zone 998:
+RMSE: `train_loss= 19.942, validation_loss= 6.863`
+
+![Uploading zone_998_forecast_plot.png…]()
 
 ## 2. Elasticity-aware Dynamic Pricing Optimization
 - 
