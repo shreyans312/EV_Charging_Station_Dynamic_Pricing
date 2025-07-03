@@ -64,18 +64,16 @@ RMSE: `train_loss= 19.942, validation_loss= 6.863`
 I have implemented a Gurobi based optimisation solution that uses the price elasticity model and also a penalize peak demand charges
 
 ###**Objective function**
-\[
-\max_{p_t} \sum_{t=1}^{T} \left[ p_t \cdot D_t \cdot \exp\left(-\epsilon_t \cdot \frac{p_t - s_t}{s_t}\right) \right] - \lambda \sum_{t=1}^{T} (p_t - s_t)^2
-\]
+![image](https://github.com/user-attachments/assets/ec4354df-c9cc-4e38-acb0-2f31f48bee24)
+**Where:**
+- `p_t`: Optimized price at time `t`
+- 's_t': Static baseline price at time `t`
+- `D_t`: Forecasted demand at time `t`
+- `e_t`: Price elasticity at time `t`
+- `lambda`: Penalty coefficient to discourage large price deviations
+- `T`: Total time intervals (eg: 72 hours)
 
-Where:
 
-- \( p_t \): Optimized service price at time \( t \)  
-- \( s_t \): Original static service price at time \( t \)  
-- \( D_t \): Forecasted demand at time \( t \)  
-- \( \epsilon_t \): Price elasticity of demand at time \( t \) (hour-dependent)  
-- \( \lambda \): Penalty coefficient for price deviation (to avoid extreme pricing)  
-- \( T \): Total number of time intervals (72 hours)  
 
 
 ## References
