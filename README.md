@@ -44,7 +44,7 @@ I have used the **UrbanEV dataset**[1] which includes:
 Eg: Zone 998:
 RMSE: `train_loss= 19.942, validation_loss= 6.863`
 
-![Uploading zone_998_forecast_plot.png…]()
+![zone_998_forecast_plot](https://github.com/user-attachments/assets/c0dc0835-40e4-4a2c-b978-51640678ecdc)
 
 ## 2. Elasticity-aware Dynamic Pricing Optimization
 - 
