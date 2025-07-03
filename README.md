@@ -86,6 +86,8 @@ Bar graph of the revenue gain using dynamic pricing vs static pricing (for first
 `Max revenue gain (%): 129.16557880527324`
 `Min revenue gain (%) : 21.64635042660337`
 
+
+This improved model compared to static models can help generate more revenue to the operator and at the same time shift consumptions to off-peak hours to reduce high demand charges. EV charging stations can now anticipate demand rather than just responding to it.
 ## References
 [1] >Li, H., Qu, H., Tan, X. et al. (2025) UrbanEV: An Open Benchmark Dataset for Urban Electric Vehicle Charging Demand Prediction. Scientific Data. [Paper in Spring Nature](https://doi.org/10.1038/s41597-025-04874-4)
 
