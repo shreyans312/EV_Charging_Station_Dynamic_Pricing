@@ -63,17 +63,17 @@ RMSE: `train_loss= 19.942, validation_loss= 6.863`
 ## 3. Optimisation Objective and Framework
 I have implemented a Gurobi based optimisation solution that uses the price elasticity model and also a penalize peak demand charges
 
-  ###**Objective function**
-  
-  ![image](https://github.com/user-attachments/assets/ec4354df-c9cc-4e38-acb0-2f31f48bee24)
-  
-  **Where:**
-  - `p_t`: Optimized price at time `t`
-  - 's_t': Static baseline price at time `t`
-  - `D_t`: Forecasted demand at time `t`
-  - `e_t`: Price elasticity at time `t`
-  - `lambda`: Penalty coefficient to discourage large price deviations
-  - `T`: Total time intervals (eg: 72 hours)
+###Objective function
+
+![image](https://github.com/user-attachments/assets/ec4354df-c9cc-4e38-acb0-2f31f48bee24)
+
+**Where:**
+- `p_t`: Optimized price at time `t`
+- 's_t': Static baseline price at time `t`
+- `D_t`: Forecasted demand at time `t`
+- `e_t`: Price elasticity at time `t`
+- `lambda`: Penalty coefficient to discourage large price deviations
+- `T`: Total time intervals (eg: 72 hours)
 
 
 
