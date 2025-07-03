@@ -24,7 +24,7 @@ I have used the **UrbanEV dataset**[1] which includes:
 ## Model Structure
 ### 1. LSTM based Demand Forecasting
 - Zone-wise models trained with:
-  - log transformed 'volume'
+  - log transformed `volume`
   - selected relevant features only using a random forest regression
   - created additional features like power
 - **Neighbour-aware features**: used average `volume` and `duration` from adjacent zones as additional features
@@ -76,8 +76,15 @@ I have also applied **PWL constraints** to approximate exponential elasticity.
 - `lambda`: Penalty coefficient to discourage large price deviations
 - `T`: Total time intervals (eg: 72 hours)
 
+## Results and Revenue Comparison
+After running the demand forecasting and optimisation model I have compiled the data within `zonewise_revenue_comparison.csv` and `optimized_zonewise_hourly_results.csv`.
+Bar graph of the revenue gain using dynamic pricing vs static pricing (for first 20 zones)
+![image](https://github.com/user-attachments/assets/9fec984a-c0e4-4d63-a132-9265f136bfd7)
 
-
+`Mean revenue gain (%): 51.13341290668615`
+`Standard deviation: 11.652244691374733`
+`Max revenue gain (%): 129.16557880527324`
+`Min revenue gain (%) : 21.64635042660337`
 
 ## References
 [1] >Li, H., Qu, H., Tan, X. et al. (2025) UrbanEV: An Open Benchmark Dataset for Urban Electric Vehicle Charging Demand Prediction. Scientific Data. [Paper in Spring Nature](https://doi.org/10.1038/s41597-025-04874-4)
