@@ -61,7 +61,8 @@ RMSE: `train_loss= 19.942, validation_loss= 6.863`
   - **High elasticity** (1.0–1.1, hours 17–19): The peak evening hours show the highest elasticity, indicating users are highly responsive to price changes. This supports the goal of reducing peak load through higher TOU prices during these hours.
  
 ## 3. Optimisation Objective and Framework
-I have implemented a Gurobi based optimisation solution that uses the price elasticity model and also a penalize peak demand charges
+I have implemented a Gurobi based optimisation solution that uses the price elasticity model and also a penalize peak demand charges.
+I have also applied **PWL constraints** to approximate exponential elasticity.
 
 **Objective function**
 
@@ -80,4 +81,5 @@ I have implemented a Gurobi based optimisation solution that uses the price elas
 
 ## References
 [1] >Li, H., Qu, H., Tan, X. et al. (2025) UrbanEV: An Open Benchmark Dataset for Urban Electric Vehicle Charging Demand Prediction. Scientific Data. [Paper in Spring Nature](https://doi.org/10.1038/s41597-025-04874-4)
+
 [2] >Kuang, H., Zhang, X., Qu, H., and You, L., and Zhu, R. and Li, J. (2024). Unravelling the effect of electricity price on electric vehicle charging behavior: A case study in Shenzhen, China. Sustainable Cities and Society. [DOI](https://doi.org/10.1016/j.scs.2024.105836)
