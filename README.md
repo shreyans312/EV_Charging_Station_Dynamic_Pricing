@@ -69,7 +69,7 @@ I have implemented a Gurobi based optimisation solution that uses the price elas
 
 **Where:**
 - `p_t`: Optimized price at time `t`
-- 's_t': Static baseline price at time `t`
+- `s_t`: Static baseline price at time `t`
 - `D_t`: Forecasted demand at time `t`
 - `e_t`: Price elasticity at time `t`
 - `lambda`: Penalty coefficient to discourage large price deviations
